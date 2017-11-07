@@ -1,8 +1,8 @@
 require "beeline"
 
 Beeline.config do
-  fore :black
-  back :yellow
+  fore black
+  back yellow
   padding
 
   if ENV["PWD"] == ENV["HOME"]
@@ -18,14 +18,14 @@ Beeline.config do
 
   padding
 
-  fore :black
-  back :yellow
-  separator_empty
+  fore black
+  back yellow
+  triangle_right_empty
 
-  fore :yellow
-  back :clear
-  separator
+  fore yellow
+  back clear
+  triangle_right
 
-  separator_empty
+  triangle_right_empty
   padding
 end

@@ -2,5 +2,5 @@ version: 1.0
 shards:
   beeline:
     github: willamin/beeline
-    commit: 6cf05a25df65884cc60a10175b32696d5ba1c5c3
+    version: 0.3.0
 
