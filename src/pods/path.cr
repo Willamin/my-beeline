@@ -10,7 +10,7 @@ class PathPod
           print "~"
         else
           dirs = ENV["PWD"].split("/")[1..-1]
-          if dirs.size > 3
+          if dirs.size > 1
             ellipsis
           end
           print "/"
