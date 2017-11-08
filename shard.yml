@@ -10,7 +10,8 @@ targets:
 
 dependencies:
   beeline:
-    github: willamin/beeline
+    # github: willamin/beeline
+    path: ~/Documents/projects/beeline
 
 crystal: 0.23.1
 

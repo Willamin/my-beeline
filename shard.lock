@@ -1,6 +1,6 @@
 version: 1.0
 shards:
   beeline:
-    github: willamin/beeline
-    version: 0.3.0
+    path: ~/Documents/projects/beeline
+    version: 0
 

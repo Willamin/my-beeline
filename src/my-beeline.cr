@@ -1,31 +1,46 @@
 require "beeline"
+require "./my-beeline/*"
+require "./pods/*"
+
+Orange = Cyan
+
+macro transition(from, to)
+  fore {{from}}
+  # back Black
+  # triangle_right
+  # fore Black
+  back {{to}}
+  triangle_right
+end
 
 Beeline.config do
-  fore black
-  back yellow
-  padding
+  UserPod.new(fore: Black, back: Green)
 
-  if ENV["PWD"] == ENV["HOME"]
-    print "~"
-  else
-    dirs = ENV["PWD"].split("/")[1..-1]
-    if dirs.size > 1
-      ellipsis
-    end
-    print "/"
-    print dirs[-1]
-  end
+  transition(Green, Yellow)
+  PathPod.new(fore: Black, back: Yellow)
 
-  padding
+  transition(Yellow, Orange)
+  # EmptyPod.new(fore: Black, back: Orange)
+  GitBranchPod.new(fore: Black, back: Orange)
 
-  fore black
-  back yellow
-  triangle_right_empty
+  transition(Orange, Red)
+  # EmptyPod.new(fore: Black, back: Red)
+  GitChangesPod.new(fore: Black, back: Red)
 
-  fore yellow
-  back clear
+  transition(Red, Magenta)
+  EmptyPod.new(fore: Black, back: Magenta)
+  # IpPod.new(fore: Black, back: Red)
+
+  transition(Magenta, Blue)
+  EmptyPod.new(fore: Black, back: Blue)
+
+  fore Blue
+  back Clear
   triangle_right
 
-  triangle_right_empty
+  newline
+  fore Clear
+  back Clear
+  print "$"
   padding
 end
