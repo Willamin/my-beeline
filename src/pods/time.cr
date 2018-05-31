@@ -1,12 +1,12 @@
 require "beeline"
 
-class UserPod
+class TimePod
   def initialize(fore : Color, back : Color)
     Beeline.config do
       fore fore
       back back
       pad_around do
-        print ENV["USER"].strip
+        print `date +%r`.strip
       end
     end
   end

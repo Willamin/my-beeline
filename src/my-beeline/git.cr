@@ -17,7 +17,11 @@ class Git
   def self.get_status
     output = IO::Memory.new
     error = IO::Memory.new
-    process = Process.run("git", args: %w(status -b --porcelain), output: output, error: error)
-    return output.to_s
+    if should_show?
+      process = Process.run("git", args: %w(status -b --porcelain), output: output, error: error)
+      return output.to_s
+    end
+
+    ""
   end
 end

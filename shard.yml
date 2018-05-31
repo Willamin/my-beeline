@@ -12,6 +12,9 @@ dependencies:
   beeline:
     # github: willamin/beeline
     path: ~/Documents/projects/beeline
+  interface_address:
+    github: t-richards/interface_address
+    version: ~> 1.0.0
 
 crystal: 0.23.1
 

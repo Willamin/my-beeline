@@ -4,3 +4,7 @@ shards:
     path: ~/Documents/projects/beeline
     version: 0
 
+  interface_address:
+    github: t-richards/interface_address
+    version: 1.0.0
+

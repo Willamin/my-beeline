@@ -1,7 +1,7 @@
 require "beeline"
 
 class GitBranchPod
-  def initialize(fore : Color, back : Color)
+  def initialize(fore : Color = Clear, back : Color = Clear)
     Beeline.config do
       fore fore
       back back
