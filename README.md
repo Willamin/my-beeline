@@ -1,6 +1,6 @@
 # my-beeline
 
-TODO: Write a description here
+![screenshot](screenshot.png)
 
 ## Installation
 
