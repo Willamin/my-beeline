@@ -1,8 +1,8 @@
 version: 1.0
 shards:
   beeline:
-    path: ~/Documents/projects/beeline
-    version: 0
+    github: willamin/beeline
+    version: 0.5.1
 
   interface_address:
     github: t-richards/interface_address
