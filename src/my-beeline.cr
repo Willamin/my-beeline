@@ -16,7 +16,7 @@ Beeline.config do
   end
 
   pad_around do
-    [Red, Yellow, Green, Blue].each do |c|
+    [Red, Yellow, Green, Cyan].each do |c|
       fore c
       print "❯"
     end
